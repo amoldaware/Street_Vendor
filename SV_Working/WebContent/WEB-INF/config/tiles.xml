@@ -1,0 +1,1496 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="base.definition" template="/WEB-INF/views/mainTemplate.jsp">
+		<put-attribute name="title" value="/WEB-INF/views/titleJsp.jsp"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/titleJsp.jsp"></put-attribute>
+		<put-attribute name="menu" value="/WEB-INF/views/menu.jsp"></put-attribute>
+		<put-attribute name="body" value="titleJsp.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/views/footer.jsp"></put-attribute>
+	</definition>
+	<definition name="batchUploadScreen" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/ApplicationLogdementInBulkProcess.jsp"></put-attribute>
+		<!-- <put-attribute name="body" value="/WEB-INF/views/ApplicationLogdgBulkProcess.jsp"></put-attribute> -->
+	</definition>
+	<definition name="success" extends="base.definition">
+		<put-attribute name="title" value="success Screen"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/success.jsp"></put-attribute>
+	</definition>
+
+	<definition name="userRegistration" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/userRegistration.jsp"></put-attribute>
+	</definition>
+
+	<definition name="newRolePage" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/userRoleCreationPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="newRoleEditPage" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/userRoleEditPage.jsp"></put-attribute>
+	</definition>
+	<definition name="mliUpdatepage" extends="base.definition">
+		<put-attribute name="title" value="success Screen"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/mliUpdate.jsp"></put-attribute>
+	</definition>
+
+	<definition name="employeesList" extends="base.definition">
+		<put-attribute name="title" value="Employees List"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/employeesList.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliMakerScreen" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/mliMakerScreen.jsp"></put-attribute>
+	</definition>
+
+	<definition name="successMliMakerScreen" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/nbfcMakerSuccess.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliCheckerScreen" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliCheckerScreen.jsp"></put-attribute>
+	</definition>
+
+	<definition name="successMliCheckerScreen" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/nbfcCheckerSuccess.jsp"></put-attribute>
+	</definition>
+
+	<definition name="fileUploading" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/fileUploading.jsp"></put-attribute>
+	</definition>
+
+	<definition name="successPage" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/successPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliCheckerConfirmation" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliCheckerConfirmation.jsp"></put-attribute>
+	</definition>
+	<definition name="CheckerRejection" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/checkerRejection.jsp"></put-attribute>
+	</definition>
+	<definition name="errorPage" extends="base.definition">
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="title" value="Error Page"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/errorPage.jsp"></put-attribute>
+	</definition>
+	<definition name="errorBlankRowListPage" extends="base.definition">
+		<put-attribute name="title" value="Error Page"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/errorBlankRowListPage.jsp"></put-attribute>
+	</definition>
+	<definition name="portfolioDetailsScreen" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/portfolioDetailsScreen.jsp"></put-attribute>
+	</definition>
+	<definition name="portfolioRejectedDetailsScreen" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/portfolioRejectedRecordsScreen.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliUserListScreen" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliUserListScreen.jsp"></put-attribute>
+	</definition>
+	<definition name="nbfcCertificate" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/nbfcCertificate.jsp"></put-attribute>
+	</definition>
+
+	<definition name="fileU" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/processing.jsp"></put-attribute>
+	</definition>
+
+	<definition name="fileLoading" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/loadingPage.jsp"></put-attribute>
+	</definition>
+	<definition name="successNBFCCMAKERPage" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/mliMakerScreen.jsp"></put-attribute>
+	</definition>
+
+	<definition name="successNBFCCHECKERPage" extends="base.definition">
+		<put-attribute name="title" value="NBFC Checker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliCheckerScreen.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliRegistration" extends="base.definition">
+		<put-attribute name="title" value="MLI Registration Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliRegistrationPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliRegApprovalRegection" extends="base.definition">
+		<put-attribute name="title" value="MLI Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/MLIRegApproveRejectionPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliNewRegistrationPage" extends="base.definition">
+		<put-attribute name="title" value="MLI Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliNewRegistrationApprovalPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliNewRegistrationSuccessPage" extends="base.definition">
+		<put-attribute name="title" value="MLI Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliNewRegistrationApprovalPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliViewEditDetails" extends="base.definition">
+		<put-attribute name="title" value="MLI Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliViewAndEditScreen.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliEditPage" extends="base.definition">
+		<put-attribute name="title" value="MLI Edit Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/mliEditPage.jsp"></put-attribute>
+	</definition>
+	<!-- Added By Parmanand -->
+	<definition name="login" extends="base.definition">
+		<put-attribute name="title" value="Login Screen"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/login.jsp"></put-attribute>
+	</definition>
+	<definition name="faq" template="/WEB-INF/views/faq.jsp">
+		<put-attribute name="title" value="faq"></put-attribute>
+	</definition>
+	<definition name="firstTimeLogin" extends="base.definition">
+		<put-attribute name="title" value="Login Screen"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/firstTimeLogin.jsp"></put-attribute>
+	</definition>
+	<definition name="sanctionDetails" extends="base.definition">
+		<put-attribute name="title" value="Portfolio Creation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/sanctionDetails.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseMakerForBatchApproval" extends="base.definition">
+		<put-attribute name="title" value="CGTMSEMakerForBatchApproval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseMakerForBatchApproval.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseMakerAllBatchFileDetailsForwarededByMLI"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="CGTMSEMakerAllBatchFileDetailsForwarededByMLI"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseMakerAllBatchFileDetailsForwarededByMLI.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseMakerForBatchApprovalUploadedBatchFile"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="CGTMSEMakerForBatchApprovalUploadedBatchFile"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseMakerForBatchApprovalUploadedBatchFile.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseMakerForBatchApprovalUploadedBatchFileCCRDetails"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="CGTMSEMakerForBatchApprovalUploadedBatchFileCCRDetails"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseMakerForBatchApprovalUploadedBatchFileCCRDetails.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseMakerRejectionAndSumbission"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="CGTMSEcgtmseMakerRejectionAndSumbission"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseMakerRejectionAndSumbission.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseCheckerForBatchApproval" extends="base.definition">
+		<put-attribute name="title" value="CGTMSECheckerForBatchApproval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCheckerForBatchApproval.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseCheckerBatchUploadsPendingForApproval"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="CGTMSECheckerBatchUploadsPendingForApproval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCheckerBatchUploadsPendingForApproval.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseCheckerForBatchApprovalAndRejection"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="CGTMSECheckerForBatchApprovalAndRejection"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCheckerForBatchApprovalAndRejection.jsp"></put-attribute>
+	</definition>
+	<definition name="adminPage" extends="base.definition">
+		<put-attribute name="title" value="Admin Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/successAdmin.jsp"></put-attribute>
+	</definition>
+	<!-- <definition name="successCGTMSEMAKERPage" extends="base.definition"> 
+		<put-attribute name="title" value="CGTMSEMAKER Success Page"></put-attribute> 
+		<put-attribute name="header" value="/WEB-INF/views/cgtmseMakerHeader.jsp"></put-attribute> 
+		<put-attribute name="body" value="/WEB-INF/views/successCGTMSEMAKER.jsp"></put-attribute> 
+		</definition> -->
+	<definition name="successCGTMSEMAKERPage" extends="base.definition">
+		<put-attribute name="title" value="CGTMSEMAKER Success Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/successCGTMSEMAKER.jsp"></put-attribute>
+	</definition>
+
+	<definition name="mliRegistrationPage" extends="base.definition">
+		<put-attribute name="title" value="CGTMSEMAKER Success Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/mliDetailPageM.jsp"></put-attribute>
+	</definition>
+	<definition name="successCGTMSECHECKERPage" extends="base.definition">
+		<put-attribute name="title" value="CGTMSECHECKER Success Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/successCGTMSECHECKER.jsp"></put-attribute>
+	</definition>
+
+	<definition name="approveRejectMLIDetails" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/mliDetailsApproveRejectedit.jsp"></put-attribute>
+	</definition>
+
+	<definition name="approveRejectNewMLIDetailsByChecker"
+		extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/newRegistrationApproveRejectPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="getmliDetailsForApprovalRejectionByChecker"
+		extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/newRegistrationApproveRejectPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="exceptionPage" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/exceptionPage.jsp"></put-attribute>
+	</definition>
+	<!-- Kailash -->
+	<definition name="sanctionMaker" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/sanctionMaker.jsp"></put-attribute>
+	</definition>
+	<definition name="sanctionChecker" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/sanctionChecker.jsp"></put-attribute>
+	</definition>
+	<!-- -->
+	<definition name="approveRejectNewMLIDetails" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/mliDetailPageC.jsp"></put-attribute>
+	</definition>
+	<definition name="mliRegApprovalRegectionSuccess" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/mliDetailPageC.jsp"></put-attribute>
+	</definition>
+	<definition name="testPage" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/testPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="newMLIRegistration" extends="base.definition">
+		<put-attribute name="title" value="CGTMSEMAKER Success Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/newMLIRegistrationPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="portFolioGrid" extends="base.definition">
+		<put-attribute name="title" value="CGTMSEMAKER Success Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/portFolioGrid.jsp"></put-attribute>
+	</definition>
+
+	<!-- Create Exposure Limit By Maker Start -->
+	<definition name="cgtmseCreateExposureLimitByMaker" extends="base.definition">
+		<put-attribute name="title" value="Create Exposure By Maker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCreateExposureLimitByMaker.jsp"></put-attribute>
+	</definition>
+
+	<definition name="cgtmseCreatedExposureLimitDetailsPendingForApproval"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Exposure Limit Details Pending For Approval From Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCreatedExposureLimitDetailsPendingForApproval.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="cgtmseCreatedExposureLimitApprovedDetails"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Exposure Limit Approved Details By Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCreatedExposureLimitApprovedDetails.jsp"></put-attribute>
+	</definition>
+
+	<definition name="cgtmseCreatedExposureLimitRejectedDetails"
+		extends="base.definition">
+		<put-attribute name="title" value="Exposure Limit Rejected Details"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCreatedExposureLimitRejectedDetails.jsp"></put-attribute>
+	</definition>
+	<!-- Create Exposure Limit By Maker End -->
+
+	<!-- Approved or reject Created Exposure Limit By Checker Start -->
+	<definition name="cgtmseCreatedExposureLimitByChecker"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Created Exposure Limit Approval Or Rejection By Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCreatedExposureLimitByChecker.jsp"></put-attribute>
+	</definition>
+
+	<definition
+		name="cgtmseCreatedExposureLimitDetailsPendingForApprovalFromChecker"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Exposure Limit Details Pending For Approval From Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCreatedExposureLimitDetailsPendingForApprovalFromChecker.jsp"></put-attribute>
+	</definition>
+
+	<definition name="cgtmseCreatedExposureLimitDetailsApprovedByChecker"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Exposure Limit Details Approved By Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCreatedExposureLimitDetailsApprovedByChecker.jsp"></put-attribute>
+	</definition>
+
+	<definition name="cgtmseCreatredExposureLimitDetailsRejectedByChecker"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Exposure Limit Rejected Details By Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseCreatredExposureLimitDetailsRejectedByChecker.jsp"></put-attribute>
+	</definition>
+
+	<!-- Approved or reject Created Exposure By Checker Limit End -->
+
+	<!-- Modify Exposure Limit By Maker Start -->
+	<definition name="disbursementCheckerApproval" extends="base.definition">
+		<put-attribute name="title" value="DisbursementCheckerApproval" />
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/disbursementCheckerApproval.jsp" />
+	</definition>
+	<definition name="disbursementMakerForApproval" extends="base.definition">
+		<put-attribute name="title" value="DisbursementMakerForApproval" />
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/disbursementMakerForApproval.jsp" />
+	</definition>
+	<definition name="exception" extends="base.definition">
+		<put-attribute name="title" value="Exception"></put-attribute>
+
+		<put-attribute name="body" value="/WEB-INF/views/exception.jsp"></put-attribute>
+	</definition>
+	<definition name="cgtmseModifyExposureLimitByMaker" extends="base.definition">
+		<put-attribute name="title" value="Modify Exposure Limit By Maker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseModifyExposureLimitByMaker1.jsp"></put-attribute>
+	</definition>
+
+	<definition
+		name="cgtmseModifyExposureLimitDetailsByMakerPendingForApprovalByChecker"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Modify Exposure Limit Details By Maker Pending For Approval By Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseModifyExposureLimitDetailsByMakerPendingForApprovalByChecker.jsp"></put-attribute>
+	</definition>
+
+	<definition
+		name="cgtmseModifiedExposureLimitDetailsByMakerApprovedByChecker"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Modified Exposure Limit Details By Maker Approved By Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseModifiedExposureLimitDetailsByMakerApprovedByChecker.jsp"></put-attribute>
+	</definition>
+
+	<definition
+		name="cgtmseModifiedExposureLimitDetailsByMakerRejectedByChecker"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Modified Exposure Limit Details By Maker Rejected ByC hecker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseModifiedExposureLimitDetailsByMakerRejectedByChecker.jsp"></put-attribute>
+	</definition>
+
+
+	<!-- Modify Exposure Limit By Maker End -->
+
+
+	<definition name="cgtmseModifiedExposureLimitApprovalAndRejectionByChecker"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Modified Exposure Limit Approval And Rejection By Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cgtmseModifiedExposureLimitApprovalAndRejectionByChecker.jsp"></put-attribute>
+	</definition>
+	<definition name="ExposureListingMaker" extends="base.definition">
+		<put-attribute name="title" value="Exposure Limit Listing Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/AllexposureLimitListing.jsp"></put-attribute>
+	</definition>
+
+	<definition name="ExposureListingChecker" extends="base.definition">
+		<put-attribute name="title" value="Exposure Limit Listing Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/AllExposureLimitCheckerListing.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="danAllocationPage" extends="base.definition">
+		<put-attribute name="title" value="DAN Allocation Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/danAllocationMakerPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="disbursedborwerDetailsPage" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/disbursedNonDisbursedDanMaker.jsp"></put-attribute>
+	</definition>
+
+	<definition name="nonDisbursedborwerDetailsPage" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/NonDisbursedborwerDetailsPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="submitForConfirmPage" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DANConfirmationPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="rpNumberGenrationPage" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/rpNumberGenrationPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="genrateRPNumberVirtualACPage" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/genrateRPNumberVirtualACPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="editRPNUmberPage" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/editRPNUmberPage.jsp"></put-attribute>
+	</definition>
+
+	<definition name="paymentInscatePage" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/paymentInicatePage.jsp"></put-attribute>
+	</definition>
+	<definition name="rpNumberConfirmationPage" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/rpNumberConfirmationPage.jsp"></put-attribute>
+	</definition>
+	<definition name="DanGeneratedRpNumberMLIChecker" extends="base.definition">
+		<put-attribute name="title"
+			value="Dan Generate RP Number Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanGeneratedRpNumberMLIChecker.jsp"></put-attribute>
+	</definition>
+	<definition name="DanGeneratedDataCorrespondingList"
+		extends="base.definition">
+		<put-attribute name="title" value="Data Corresponding to Dan"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanGeneratedDataCorrespondingList.jsp"></put-attribute>
+	</definition>
+	<definition name="DisburseNonDisburseDataDanList" extends="base.definition">
+		<put-attribute name="title"
+			value="Disburse Non Disbuser Data for Dans"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DisburseNonDisburseDataDanList.jsp"></put-attribute>
+	</definition>
+	<definition name="DanPaymentInitiationChecker" extends="base.definition">
+		<put-attribute name="title" value="Dan Payment Initiation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanPaymentInitiationChecker.jsp"></put-attribute>
+	</definition>
+	<definition name="DanCheckerApprovalSuccess" extends="base.definition">
+		<put-attribute name="title" value="Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanCheckerApprovalSuccess.jsp"></put-attribute>
+	</definition>
+	<definition name="DanPaymentCheckerSuccess" extends="base.definition">
+		<put-attribute name="title"
+			value="DAN Payment Initiation Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanPaymentCheckerSuccess.jsp"></put-attribute>
+	</definition>
+	<definition name="customException" extends="base.definition">
+		<put-attribute name="title" value="Exception"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/customException.jsp"></put-attribute>
+	</definition>
+
+	<definition name="DanGeneratedRpNumberMLIChecker" extends="base.definition">
+		<put-attribute name="title"
+			value="Dan Generate RP Number Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanGeneratedRpNumberMLIChecker.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="PortfolioDetailForUserReport" extends="base.definition">
+		<put-attribute name="title" value="User Report"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/PortfolioDetailForUserReport.jsp"></put-attribute>
+	</definition>
+
+	<definition name="dynamicUserReport" extends="base.definition">
+		<put-attribute name="title" value="User Report"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/dynamicUserReport.jsp"></put-attribute>
+	</definition>
+
+	<definition name="dynamicUserReportMK" extends="base.definition">
+		<put-attribute name="title" value="User Report"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/dynamicMKUserReport.jsp"></put-attribute>
+	</definition>
+
+
+
+
+	<definition name="DanGeneratedDataCorrespondingList"
+		extends="base.definition">
+		<put-attribute name="title" value="Data Corresponding to Dan"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanGeneratedDataCorrespondingList.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="rpNumberCorrespondingData" extends="base.definition">
+		<put-attribute name="title" value="Data Corresponding to Dan"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/RpNumberCorrespondingData.jsp"></put-attribute>
+	</definition>
+
+	<definition name="rpNumberCorrespondingDataMK" extends="base.definition">
+		<put-attribute name="title" value="Data Corresponding to Dan"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/rpNumberCorrespondingDataMK.jsp"></put-attribute>
+	</definition>
+
+
+
+	<definition name="DisburseNonDisburseDataDanList" extends="base.definition">
+		<put-attribute name="title"
+			value="Disburse Non Disbuser Data for Dans"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DisburseNonDisburseDataDanList.jsp"></put-attribute>
+	</definition>
+
+	<definition name="userReportdisburseNonDisburseData"
+		extends="base.definition">
+		<put-attribute name="title"
+			value="Disburse Non Disbuser Data for Dans"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/UserReportdisburseNonDisburseData.jsp"></put-attribute>
+	</definition>
+
+	<definition name="DanPaymentInitiationChecker" extends="base.definition">
+		<put-attribute name="title" value="Dan Payment Initiation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanPaymentInitiationChecker.jsp"></put-attribute>
+	</definition>
+	<definition name="DanCheckerApprovalSuccess" extends="base.definition">
+		<put-attribute name="title" value="Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanCheckerApprovalSuccess.jsp"></put-attribute>
+	</definition>
+	<definition name="DanPaymentCheckerSuccess" extends="base.definition">
+		<put-attribute name="title"
+			value="DAN Payment Initiation Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanPaymentCheckerSuccess.jsp"></put-attribute>
+	</definition>
+	<definition name="customException" extends="base.definition">
+		<put-attribute name="title" value="Exception"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/customException.jsp"></put-attribute>
+	</definition>
+
+	<definition name="danForAllCgtmseChecker" extends="base.definition">
+		<put-attribute name="title" value="Exception"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/danForAllCgtmseChecker.jsp"></put-attribute>
+	</definition>
+	<definition name="dateWiseGfBatchApplicaiton" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/nbfcAppropriationList.jsp"></put-attribute>
+	</definition>
+	<definition name="dateAppropriation" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DateWiseNbfcAppropriation.jsp"></put-attribute>
+	</definition>
+	<definition name="dateAppropriationBetweenDates" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/NbfcAppropriationBetweenDatePage.jsp"></put-attribute>
+	</definition>
+	<definition name="nbfcAppropriationDataBetweenDates"
+		extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/NbfcAppropriationDataBetweenDates.jsp"></put-attribute>
+	</definition>
+	<definition name="successAppropriation" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/successAppropriation.jsp"></put-attribute>
+	</definition>
+	<definition name="appropriatePayment" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/NBFCPaymentAppropriation.jsp"></put-attribute>
+	</definition>
+	<definition name="appropriatedAmountSucces" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/AppropriatedAmountSucces.jsp"></put-attribute>
+	</definition>
+	<!-- Added by say 22 Nov 2018 -->
+	<definition name="userDeleteEditPage" extends="base.definition">
+		<put-attribute name="title" value="Employee Data Form"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/userDeleteEditPage.jsp"></put-attribute>
+	</definition>
+	<!--end -->
+	<!-- Added by say 6 DEC 2018 -->
+	<definition name="TaxInvoiceReport" extends="base.definition">
+		<put-attribute name="title" value="Tax Invoice"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/TaxInvoiceReport.jsp"></put-attribute>
+	</definition>
+	<!-- Added by say 6 DEC 2018 -->
+	<definition name="Forgot_password" extends="base.definition">
+		<put-attribute name="title" value="Forgot password"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/Forgot_password.jsp"></put-attribute>
+	</definition>
+	<definition name="confirm_password" extends="base.definition">
+		<put-attribute name="title" value="confirm password"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/confirm_password.jsp"></put-attribute>
+	</definition>
+	<!-- end -->
+	<!-- Added by say 8 jan 2019 -->
+	<definition name="npaDetail" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/npaDetail.jsp"></put-attribute>
+	</definition>
+	<definition name="npaApprovalRejection" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/npaApproval.jsp"></put-attribute>
+	</definition>
+	<definition name="npaDetailsForCGTMSE" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/npaDetailsForCGTMSE.jsp"></put-attribute>
+	</definition>
+	<definition name="npaDetailsData" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/npaDetailsData.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="npaReportInputForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NPAReportInput.jsp"></put-attribute>
+	</definition>
+	<definition name="npaReportListDetails" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NPAReportDetailList.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="npaClaimDetailsForCGTMSE" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/npaClaimDetailsForCGTMSE.jsp"></put-attribute>
+	</definition>
+	<definition name="npaEditDetails" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/npaEditDetails.jsp"></put-attribute>
+	</definition>
+	<definition name="npaEditModify" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/npaModifyDetails.jsp"></put-attribute>
+	</definition>
+	
+   <definition name="cgpanDetails" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/cgpanDetailReport.jsp"></put-attribute>
+	</definition>
+	<definition name="itpanSearchHistory" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/itpanSearchHistoryPage.jsp"></put-attribute>
+	</definition>
+	<definition name="searchItpan" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/searchItpanPage.jsp"></put-attribute>
+	</definition>
+		<definition name="TaxInvoiceGeneration" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/TaxInvoiceGeneration.jsp"></put-attribute>
+	</definition>
+	<definition name="ProformaInvoiceGeneration" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ProformaInvoiceGeneration.jsp"></put-attribute>
+	</definition>
+	<definition name="appStatus" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/applicationStatusDetails.jsp"></put-attribute>
+	</definition>
+		<!-- ASF ADDED BY SAYALI -->
+		<definition name="ASFBulkUploadDetails" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ASFBulkUploadDetails.jsp"></put-attribute>
+	</definition>
+		<definition name="ASFBulkUploadSuccess" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ASFBulkUploadSucces.jsp"></put-attribute>
+	</definition>
+		<definition name="ASFBulkUploadCheckerDetails" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ASFBulkUploadCheckerDetails.jsp"></put-attribute>
+	</definition>
+	<definition name="danAllocationPageASF" extends="base.definition">
+		<put-attribute name="title" value="DAN Allocation Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/danAllocationASFMaker.jsp"></put-attribute>
+
+	</definition> 
+		<definition name="submitForConfirmPageASF" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DANConfirmationPageASF.jsp"></put-attribute>
+	</definition>
+
+	<definition name="rpNumberGenrationPageASF" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/rpNumberGenrationPageASF.jsp"></put-attribute>
+	</definition>
+
+	<definition name="genrateRPNumberVirtualACPageASF" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/genrateRPNumberVirtualACPageASF.jsp"></put-attribute>
+	</definition>
+	<definition name="rpNumberConfirmationPageASF" extends="base.definition">
+		<put-attribute name="title" value="Borrower DetailsPage Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/rpNumberConfirmationPageASF.jsp"></put-attribute>
+	</definition>
+	
+		<definition name="DanPaymentInitiationCheckerASF" extends="base.definition">
+		<put-attribute name="title" value="Dan Payment Initiation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanPaymentInitiationCheckerASF.jsp"></put-attribute>
+	</definition>
+	<definition name="DanCheckerApprovalSuccessASF" extends="base.definition">
+		<put-attribute name="title" value="Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanCheckerApprovalSuccessASF.jsp"></put-attribute>
+	</definition>
+	<definition name="DanPaymentCheckerSuccessASF" extends="base.definition">
+		<put-attribute name="title"
+			value="DAN Payment Initiation Approval Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DanPaymentCheckerSuccess.jsp"></put-attribute>
+	</definition>
+	<definition name="dateAppropriationASF" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/DateWiseNbfcAppropriationASF.jsp"></put-attribute>
+	</definition>
+	<definition name="dateWiseGfBatchApplicaitonASF" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/nbfcAppropriationListASF.jsp"></put-attribute>
+	</definition>
+	<definition name="dateAppropriationBetweenDatesASF" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/NbfcAppropriationBetweenDatePageASF.jsp"></put-attribute>
+	</definition>
+	<definition name="nbfcAppropriationDataBetweenDatesASF"
+		extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/NbfcAppropriationDataBetweenDatesASF.jsp"></put-attribute>
+	</definition>
+	<definition name="appropriatePaymentASF" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/NBFCPaymentAppropriationASF.jsp"></put-attribute>
+	</definition>
+	<definition name="appropriatedAmountSuccesASF" extends="base.definition">
+		<put-attribute name="title" value="NBFC Appropriation"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/AppropriatedAmountSuccesASF.jsp"></put-attribute>
+	</definition>
+		<definition name="ProformaInvoiceGenerationASF" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ProformaInvoiceGenerationASF.jsp"></put-attribute>
+	</definition>
+		<definition name="TaxInvoiceGenerationASF" extends="base.definition">
+		<put-attribute name="title" value="NPA Detail"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/TaxInvoiceGenerationASF.jsp"></put-attribute>
+	</definition>
+	<!--Added by Say For CLAIM MODULE  -->
+		<definition name="displayClaimLodgementInputForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgement.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Diksha NPA BulkUpload -->
+	<definition name="NpaBulkUploadInput" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NpaBulkUploadInput.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="NpaBulkUploadProcess" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NpaBulkUploadProcess.jsp"></put-attribute>
+	</definition>
+	
+	<!-- End-->
+	
+	<definition name="displayClaimLodgementInputForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgement.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="claimLodgementInputForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgementInputForm.jsp"></put-attribute>
+	</definition>
+	<definition name="claimLodgCheckListRecomd" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgCheckListRecomd.jsp"></put-attribute>
+	</definition>
+		<definition name="claimRecommendationCGS" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimRecommendationCGS.jsp"></put-attribute>
+	</definition>
+	<definition name="displayClaimLodgementApprovalList" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/displayClaimLodgementApprovalList.jsp"></put-attribute>
+	</definition>
+	<definition name="displayClaimLodgementApprovalListCGS1" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/displayClaimLodgementApprovalListCGS.jsp"></put-attribute>
+	</definition>
+	<definition name="claimLodgementDetailForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgementDetailForm.jsp"></put-attribute>
+	</definition>
+		<definition name="claimLodgementDetailFormCGS" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgementDetailFormCGS.jsp"></put-attribute>
+	</definition>
+	<definition name="claimLodgementCheckList" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimChecklistDetails.jsp"></put-attribute>
+	</definition>
+	<definition name="displayClaimLodgementApprovalListCGS" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/displayClaimLodgementApprovalListCGSMLI.jsp"></put-attribute>
+	</definition>
+	<definition name="viewClaimLodgementCertificate" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/viewClaimLodgementCertificate.jsp"></put-attribute>
+	</definition>
+		<definition name="claimLodgementsuccessForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgementsuccessForm.jsp"></put-attribute>
+	</definition>
+	<definition name="claimLodgedModificationFormForMLIMaker" extends="base.definition">
+		<put-attribute name="title" value="Claim Modification"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgedModificationFormForMLIMaker.jsp"></put-attribute>
+	</definition>	
+	<definition name="successclaimLoadgementApprovalMLI" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/successclaimLoadgementApprovalMLI.jsp"></put-attribute>
+	</definition>
+		<definition name="claimLodgementCheckListCGS" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimLodgementCheckListCGS.jsp"></put-attribute>
+	</definition>
+		<definition name="ClaimReturnReasons" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimReturnReasons.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ClaimSettledReportInput" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimSettledReportInput.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ClaimSettledReportData" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimSettledReportData.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ClaimDetailsReportDataAll" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimDetailsReportDataAll.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ClaimDetailsReportInput" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimDetailsReportInput.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ClaimDetailsReportData" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimDetailsReportData.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ClaimSettledReportDataAll" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimSettledReportDataAll.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ClaimDetailForm" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimDetailsForm.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="ClaimAllDetailForm" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimAllDetailsForm.jsp"></put-attribute>
+	</definition>
+		
+		<definition name="AppClosureRequestInput" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/AppClosureRequestInput.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="AppClosureRequestDetails" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/AppClosureRequestDetails.jsp"></put-attribute>
+	</definition>
+	
+		<definition name="AppClosureRequestApproval" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/AppClosureRequestApproval.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="AppClosureRequestApproveDetails" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/AppClosureRequestApproveDetails.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="EditAppClosureDetails" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/EditAppClosureDetails.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="AppClosureRequestReportInput" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/AppClosureRequestReportInput.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="AppClosureRequestReportData" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/AppClosureRequestReportData.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="NPAUpgradationInput" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NPAUpgradationInput.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="NpaUpgradationDetails" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NpaUpgradationDetails.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="NpaUpgradationApproval" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NpaUpgradationApproval.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="NpaUpgradationEditUpdate" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NpaUpgradationEditUpdate.jsp"></put-attribute>
+	</definition>
+	
+		<definition name="SaveNpaUpgradationEditDetails" extends="base.definition">
+		<put-attribute name="title" value="NPA Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/SaveNpaUpgradationEditDetails.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="NPAUpgradationReportInput" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NPAUpgradationReportInput.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="NPAUpgradationReportData" extends="base.definition">
+		<put-attribute name="title" value="NBFC Maker Page"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/NPAUpgradationReportData.jsp"></put-attribute>
+	</definition>
+	
+		<!-- Added By Parmanand For Claim Bank Mandate 24-Dece-2019 Start -->
+	
+	 <definition name="claimBankManToAddAccount" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankMandateFormToAddAccountFromNM.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="bankMadateSaveSucessFully" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankMandateAccountDtlsAddedSucessfullyFromNM.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="bankMadateAlreadyExist" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankMandateFormToAddAccountFromNM.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="claimBankManApprovedSucessfullyFromNC" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankManApprovedSucessfullyFromNC.jsp"></put-attribute>
+	</definition>
+	
+	
+	
+	<definition name="displayClaimBankMandateFormForUpdate" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Details for Approval and Rejection from MLi Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankMandateNBFCMakerEdit.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="bankMandateUpdatedSuccessfully" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/bankMandateUpdatedSuccessfully.jsp"></put-attribute>
+	</definition>
+	
+	
+	
+	<definition name="claimBankManToAppAndRej" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Details for Approval and Rejection from MLi Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankManAddedAccDtlsToAppAndRejFromNC.jsp"></put-attribute>
+	</definition>
+	<definition name="bankMandateReturnByNBFCChecker" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Details for Approval and Rejection from MLi Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/bankMandateReturnByNBFCChecker.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="claimBankManToAppAndRejFromCGTMSECC" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Details for Approval and Rejection from MLi Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankManAddedAccDtlsToAppAndRejFromCC.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="claimBankMandateDataForApprovalOrRejectionFromCGTMSE" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Details for Approval and Rejection from MLi Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankMandateDtlsForAppOrReturnFromCGTMSE.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="returnBankMandateByCGTMSECheckerSucessfully" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Details for Approval and Rejection from MLi Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/returnBankMandateByCGTMSECheckerSucessfully.jsp"></put-attribute>
+	</definition>
+		
+	<definition name="approvedBankMandateByCGTMSECheckerSucessfully" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Details for Approval and Rejection from MLi Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/approvedBankMandateByCGTMSECheckerSucessfully.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="accountDetailsReport" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Details for Approval and Rejection from MLi Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimBankMandateAccountDetailsReport.jsp"></put-attribute>
+	</definition>
+<definition name="stateWiseReportInput" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/stateWiseReportDetail.jsp"></put-attribute>
+	</definition>
+	<definition name="ExposureWiseGuaranteepageinput" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/exposurewisereport.jsp"></put-attribute>
+	</definition>
+	<!-- Added By Parmanand For Claim Bank Mandate 24-Dece-2019 End -->
+	<!-- add by azad -->
+	<definition name="StatutsWiseReportInput" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/StatutsWiseReportDetail.jsp"></put-attribute>
+	</definition>
+	
+	 
+	<definition name="ASFReportInputForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ASFReportInputForm.jsp"></put-attribute>
+	</definition>  
+	
+	<definition name="MliWiseReportInputForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/MliWiseReportInputForm.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="DANGFReportInputForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/DANGFReportInputForm.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="DANASFReportInputForm" extends="base.definition">
+		<put-attribute name="title" value="Claim Processing"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/DANASFReportInputForm.jsp"></put-attribute>
+	</definition>
+	
+		<definition name="bulkUploadPage" extends="base.definition">
+		<put-attribute name="title" value="Bulk Upload Data "></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/bulkuploadtrack.jsp"></put-attribute>
+	</definition>
+	<definition name="index" extends="base.definition">
+		<put-attribute name="title" value="Login Screen"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp"></put-attribute>
+	</definition>
+	<definition name="streetVendorAppStatus" extends="base.definition">
+		<put-attribute name="title" value="success Screen"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/streetVendorAppStatus.jsp"></put-attribute>
+	</definition>
+	<definition name="login" template="/WEB-INF/views/login.jsp">
+		<put-attribute name="title" value="Login Screen"></put-attribute>
+		<!-- <put-attribute name="body" value="/WEB-INF/views/login.jsp"></put-attribute> -->
+	</definition> 
+	<definition name="disclaimer" template="/WEB-INF/views/disclaimer.jsp">
+		<put-attribute name="title" value="disclaimer"></put-attribute>
+	</definition>
+	<definition name="index" template="/WEB-INF/views/index.jsp">
+		<put-attribute name="title" value="disclaimer"></put-attribute>			
+	</definition>
+	<definition name="dashBoard" extends="base.definition">
+		<put-attribute name="title" value="Dashboard"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/dashBoard.jsp"></put-attribute>
+	</definition>
+	<definition name="cliamUpload" extends="base.definition">
+		<put-attribute name="title" value="Claim Upload"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimUpload.jsp"></put-attribute>
+	</definition> 
+	
+	<definition name="BankMandateFormCgtmse" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Form NBFC Checker"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/BankMandateFormCgtmse.jsp"></put-attribute>
+	</definition>  
+	
+	<definition name="BankMandateFormMli" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate Form MLI"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/BankMandateFormMli.jsp"></put-attribute>
+	</definition>  
+	
+	<definition name="cliamUploadCgtmse" extends="base.definition">
+		<put-attribute name="title" value="Claim Upload CGTMSE"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimUploadCgtmse.jsp"></put-attribute>
+	</definition> 
+	
+	<definition name="BankMandateFormCgtmseApproval" extends="base.definition">
+		<put-attribute name="title" value="Bank Mandate CGTMSE Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/BankMadateApprovalByCgtmse.jsp"></put-attribute>
+	</definition> 
+	
+	<definition name="urtFileUploadCgtmseMaker" extends="base.definition">
+		<put-attribute name="title" value="UTR FILE UPLOAD"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/UrtFileUpload.jsp"></put-attribute>
+	</definition> 
+	
+	<definition name="utrFileApproval" extends="base.definition">
+		<put-attribute name="title" value="UTR FILE Approval"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/UtrFileUploadApproval.jsp"></put-attribute>
+	</definition> 
+	
+	<definition name="claimPayment" extends="base.definition">
+		<put-attribute name="title" value="Claim Payment"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimPayment.jsp"></put-attribute>
+	</definition> 
+	<definition name="RecoveryUpload" extends="base.definition">
+		<put-attribute name="title" value="Recovery"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/RecoveryUpload.jsp"></put-attribute>
+	</definition> 
+	<definition name="claimRecoveryReport" extends="base.definition">
+		<put-attribute name="title" value="Claim Recovery Report"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/claimRecoveryReport.jsp"></put-attribute>
+	</definition> 
+	
+	<definition name="appropriationManual" extends="base.definition">
+		<put-attribute name="title" value="Appropriation Manual"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/appropriationManual.jsp"></put-attribute>
+	</definition> 
+	<definition name="disbursementDetails" extends="base.definition">
+		<put-attribute name="title" value="Disbursement Details"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/disbursementDetails.jsp"></put-attribute>
+	</definition>
+	<definition name="summaryReportStateActivity" extends="base.definition">
+		<put-attribute name="title" value="Disbursement Details"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/summaryReportStateActivity.jsp"></put-attribute>
+	</definition>
+	<definition name="claimPaymentNbfc" extends="base.definition">
+		<put-attribute name="title" value="Claim Payment Report"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/ClaimPaymentNbfcReport.jsp"></put-attribute>
+	</definition>
+	<definition name="disbDetailsData" extends="base.definition">
+		<put-attribute name="title" value="Claim Payment Report"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/DisbursementDetailsData.jsp"></put-attribute>
+	</definition>
+	<!--  END -->
+	<!-- Added By Sarita 23-03-2022 [START] -->
+	<definition name="claimApprovedData" extends="base.definition">
+		<put-attribute name="title" value="Send Claim Approved Data"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/nbfcHeaderPage.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/sendApprovedClaim.jsp"></put-attribute>
+	</definition>
+	<!-- Added By Sarita 23-03-2022 [END] -->
+	<!--  END -->
+</tiles-definitions>
+
+

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/tx
+http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<context:property-placeholder
+		location="classpath:resources/database.properties" />
+	<context:component-scan base-package="com.nbfc" />
+	
+	<context:property-placeholder location="classpath:resources/SFTPServer.properties"/>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	<tx:annotation-driven
+		transaction-manager="hibernateTransactionManager" />
+
+	<mvc:annotation-driven />
+
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>
+				org.springframework.web.servlet.view.tiles2.TilesView
+			</value>
+		</property>
+	</bean>
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="props" />
+	</bean>
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>/WEB-INF/config/tiles.xml</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="employeeValidator"
+		class="com.nbfc.validation.EmployeeValidator" />
+	<bean id="mailConf" class="com.nbfc.model.MailConfiguration" />
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!--<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" /> 
+			<property name="url" value="jdbc:mysql://100.71.41.138:3306/STVNPROD?rewriteBatchedStatements=true" 
+			/> <property name="username" value="stvnuser" /> <property name="password" 
+			value="StV@#$" /> -->
+		<property name="driverClassName" value="${database.driver}" />
+		<property name="url" value="${database.url}" />
+		<property name="username" value="${database.user}" />
+		<property name="password" value="${database.password}" />
+	</bean>
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="annotatedClasses">
+			<list>
+				<value>com.nbfc.model.ClaimUploadSTG</value>
+				<value>com.nbfc.model.ClaimUploadTracker</value>
+				<value>com.nbfc.model.ClaimUploadHeader</value>
+				<value>com.nbfc.model.BankMandateForm</value>
+				<value>com.nbfc.model.Login</value>
+				<value>com.nbfc.model.User</value>
+				<value>com.nbfc.model.State</value>
+				<value>com.nbfc.model.District</value>
+				<value>com.nbfc.model.PortfolioBatchApp</value>
+				<value>com.nbfc.model.PortfolioNumInfo</value>
+				<value>com.nbfc.model.MliMakerEntity</value>
+				<value>com.nbfc.model.PromoterDetails</value>
+				<value>com.nbfc.model.SSIDetail</value>
+				<value>com.nbfc.model.PortfolioValidate</value>
+				<value>com.nbfc.model.MLIInfo</value>
+				<value>com.nbfc.model.ExposureDetails</value>
+				<value>com.nbfc.model.MLIName</value>
+				<value>com.nbfc.model.MLIMakerApprovalRejection</value>
+				<value>com.nbfc.model.PortfolioNumber</value>
+				<value>com.nbfc.model.PortfolioAmountCount</value>
+				<value>com.nbfc.model.DistrictName</value>
+				<value>com.nbfc.model.StateName</value>
+				<value>com.nbfc.model.UserPerivilegeDetails</value>
+				<value>com.nbfc.model.MLIDetails</value>
+				<value>com.nbfc.model.GetMLIName</value>
+				<value>com.nbfc.model.PortfolioNumberMaster</value>
+				<value>com.nbfc.model.PortfolioNumberInfo</value>
+				<value>com.nbfc.model.StateMaster</value>
+				<value>com.nbfc.model.MLIDetails</value>
+				<value>com.nbfc.model.BankDetails</value>
+				<value>com.nbfc.model.MLIRegistration</value>
+				<value>com.nbfc.model.MLIReating</value>
+				<value>com.nbfc.model.MLIEditDetails</value>
+				<value>com.nbfc.model.AudMLiDetails</value>
+				<value>com.nbfc.model.MLIEditApproveRejectUpdate</value>
+				<value>com.nbfc.model.MLIRegistrationAppraval</value>
+				<value>com.nbfc.model.AudMLIEditDetails</value>
+				<value>com.nbfc.model.MLIMainEditDetails</value>
+				<value>com.nbfc.model.NewMLIRegistration</value>
+				<value>com.nbfc.model.UserActivity</value>
+				<value>com.nbfc.model.UserRolePrivelage</value>
+				<value>com.nbfc.model.DisbursementCheckerApprovalModel</value>
+				<value>com.nbfc.model.DisbursementForApprovalModel</value>
+				<value>com.nbfc.model.PortfolioNumberDetails</value>
+				<value>com.nbfc.model.SanctionCheckerModel</value>
+				<value>com.nbfc.model.SanctionCheckerModelAud</value>
+				<value>com.nbfc.model.SanctionMakerModel</value>
+				<value>com.nbfc.model.SanctionMakerModelForAud</value>
+				<value>com.nbfc.model.NbfcInterfaceUploadForPortfolioGridPaneModel
+				</value>
+				<value>com.nbfc.model.PortfolioGridPanModel</value>
+				<value>com.nbfc.model.DANAllocation</value>
+				<value>com.nbfc.model.DANAllocationFee</value>
+				<value>com.nbfc.model.MLICGFeeDetails</value>
+				<value>com.nbfc.model.DanAllClass</value>
+				<value>com.nbfc.model.DANupdateion</value>
+				<value>com.nbfc.model.DANPaymentDetails</value>
+				<value>com.nbfc.model.DanGenerateRpNumberForPaymentCheckerModel
+				</value>
+				<value>com.nbfc.model.DanCorrespondigDataModel</value>
+				<value>com.nbfc.model.DisburseNonDisburseModel</value>
+				<!-- Add By Saurav Tyagi 16/07/2018 for Exposure ID -->
+				<value>com.nbfc.model.MLIExposureId</value>
+				<value>com.nbfc.model.NBFCHeaderDetails</value>
+				<value>com.nbfc.model.MLIBankIdDetails</value>
+				<value>com.nbfc.model.PortfolioMSTModel</value>
+				<!-- Add By Saurav Tyagi 05/12/2018 for UserDashboard -->
+				<value>com.nbfc.model.UserDashboardVmodel</value>
+				<value>com.nbfc.model.NBFCUserPortfolioDetails</value>
+				<!-- Sayli Object on 14/12/2018 -->
+				<value>com.nbfc.model.OtpDetailsModel</value>
+				<value>com.nbfc.model.TaxDetailMaster</value>
+				<!-- Parmanand Object -->
+
+				<value>com.nbfc.model.CGTMSEAuditExposureLimit</value>
+				<value>com.nbfc.model.CGTMSECreateExposureLimitByMaker</value>
+				<value>com.nbfc.model.CGTMSEExposureMasterCheckerGETExposureDetails
+				</value>
+				<value>com.nbfc.model.CGTMSEExposureMasterCheckerGETMemberInfoDetails
+				</value>
+				<value>com.nbfc.model.CGTMSEExposureMasterCheckerMLIName</value>
+				<value>com.nbfc.model.CGTMSEExposureMasterDetails</value>
+				<value>com.nbfc.model.CGTMSEExposureMasterGetDetailsOfMemberInfo
+				</value>
+				<value>com.nbfc.model.CGTMSEExposureMasterMLIName</value>
+				<value>com.nbfc.model.CGTMSEMemberInfoDetails</value>
+				<value>com.nbfc.model.CGTMSERejectExposureMasterCheckerDetailsData
+				</value>
+				<value>com.nbfc.model.CGTMSESaveExposureMasterCheckerDetailsData
+				</value>
+
+				<value>com.nbfc.model.MLIExposureIDDetails</value>
+				<value>com.nbfc.model.PortFolioDetailsInChildTBL</value>
+				<value>com.nbfc.model.PortFolioDetailsInParentTBL</value>
+
+				<value>com.nbfc.model.NBFCUserPerivilege</value>
+				<value>com.nbfc.model.NBFCPrivilegeMaster</value>
+				<value>com.nbfc.model.SanctionDetailModel</value>
+				<value>com.nbfc.model.SanctionDetailsExposureLimitModel</value>
+				<value>com.nbfc.model.SanctionDetailsSave</value>
+				<value>com.nbfc.model.SanctionDetailsChild</value>
+				<value>com.nbfc.model.TotalNumberOfPortfolio</value>
+				<value>com.nbfc.model.CGTMSEMakerForBatchApprovalGetStatus</value>
+				<value>com.nbfc.model.CGTMSEMakerForBatchApprovalUploadedBatchFile
+				</value>
+				<value>com.nbfc.model.CGTMSEMakerAllBatchFileDetailsForwarededByMLI
+				</value>
+				<value>com.nbfc.model.CGTMSEMakerRejectionAndSumbission</value>
+				<value>com.nbfc.model.CGTMSEMakerRejectionAndSumbissionSave</value>
+				<value>com.nbfc.model.CGTMSECheckerBatchUploadsPendingForApproval
+				</value>
+				<value>com.nbfc.model.CGTMSECheckerForBatchApprovalAndRejectionSumbissionSave
+				</value>
+				<value>com.nbfc.model.CGTMSECheckerForBatchApprovalAndRejectionSumbission
+				</value>
+				<value>com.nbfc.model.CGTMSECheckerForBatchApprovalGetStatus</value>
+				<!--Sayli -->
+				<value>com.nbfc.model.UserInfoModel</value>
+				<value>com.nbfc.model.UseRoleModel</value>
+				<value>com.nbfc.model.UserHistory</value>
+				<value>com.nbfc.model.UserRoleTypeModel</value>
+				<value>com.nbfc.model.DanAllocationForNbfcMakerUsingVWModel</value>
+
+				<!--Kailash -->
+				<value>com.nbfc.model.DanGenerateRpNumberForPaymentCheckerModel
+				</value>
+				<value>com.nbfc.model.DanCorrespondigDataModel</value>
+				<value>com.nbfc.model.DisburseNonDisburseModel</value>
+				<value>com.nbfc.model.DanDisbursedDataModel</value>
+				<value>com.nbfc.model.DanAllForCgtmseCheckerModel</value>
+				<value>com.nbfc.model.DanAllForCgtmseCheckerApprovalModel</value>
+				<value>com.nbfc.model.DanAllocationCheckerApproval</value>
+				<value>com.nbfc.model.DanPaymentInitiateModel</value>
+				<value>com.nbfc.model.DanCorressDataToRPNumberCheckerModel</value>
+				<value>com.nbfc.model.NBFCAppropriationModelUpdate</value>
+				<value>com.nbfc.model.NBFCAppropriationModel</value>
+				<value>com.nbfc.model.UserInfo</value>
+				<value>com.nbfc.model.MLIIdDetails</value>
+				<!-- MIS Reports -->
+				<value>com.nbfc.model.FileUploadModel</value>
+				<value>com.nbfc.model.TaxInvoiceDetails</value>
+				<value>com.nbfc.model.DanCgpanDetailsModel</value>
+				<value>com.nbfc.model.ProformaInvoiceDetails</value>
+				<value>
+					com.nbfc.model.DanAllocationForASFNbfcMakerUsingVWModel
+				</value>
+				<value>
+					com.nbfc.model.DanCorrespondigDataASFModel
+				</value>
+				<value>
+					com.nbfc.model.DanPaymentInitiateASFModel
+				</value>
+				<value>com.nbfc.model.DemandDeviceModel</value>
+				<value>com.nbfc.model.TaxInvoiceDetailsASF</value>
+				<value>com.nbfc.model.ProformaInvoiceDetailsASF</value>
+				<value>com.nbfc.model.GetMliBrrowerNpaDtlsDuringClaimLodgementModel1
+				</value>
+				<value>com.nbfc.model.GetMliBrrowerNpaDtlsDuringClaimLodgementModel2
+				</value>
+				<value>com.nbfc.model.GetMliBrrowerNpaDtlsDuringClaimLodgementModel3
+				</value>
+				<value>com.nbfc.model.ClaimDetailsModel</value>
+				<value>com.nbfc.model.DanDisbursedASFDataModel</value>
+				<value>com.nbfc.model.documentModel</value>
+				<value>com.nbfc.model.ClaimReturnReasonsModel</value>
+				<value>com.nbfc.model.ASFDetailModel</value>
+				<value>com.nbfc.model.ClaimLodgeBlobModel</value>
+				<value>com.nbfc.model.ClaimBankMandateBlobModel</value>
+				<value>com.nbfc.model.ClaimBankMandateBlobModelDownLoadPDF</value>
+				<value>com.nbfc.model.MailConfiguration</value>
+				<value>com.nbfc.utility.EmailUtility</value>
+				<value>com.nbfc.model.BulkUploadTracker</value>
+				<value>com.nbfc.model.TBL_KEY_VALUE</value>
+				<value>com.nbfc.model.MLI_UNDERTAKEN_UPLOAD</value>
+				<value>com.nbfc.model.SessionTrackHistory</value>
+				<value>com.nbfc.model.ApplicationDetailsBean</value>
+				<value>com.nbfc.model.StreetVendorMasterHistory</value>
+				<!-- <value>com.nbfc.service.MLIDetailsService</value> -->
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.c3p0.min_size">${hibernate.c3p0.min_size}</prop>
+				<prop key="hibernate.c3p0.max_size">${hibernate.c3p0.max_size}</prop>
+				<prop key="hibernate.c3p0.acquire_increment">${hibernate.c3p0.acquire_increment}</prop>
+				<prop key="hibernate.c3p0.timeout">${hibernate.c3p0.timeout}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="hibernateTransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+</beans>

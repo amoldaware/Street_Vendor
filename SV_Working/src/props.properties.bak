@@ -1,0 +1,31 @@
+NotEmpty.EmployeeBean.fName = User Name is required
+NotEmpty.userDetails.email = Email is required
+
+Email.userDetails.email = Enter valid email Id
+URL.userDetails.email = Enter valid URL
+
+#Error message for Login page Screen
+userid.required=Please Enter User Id
+password.required=Please Enter Password
+
+excelView.(class)=com.technicalkeeda.view.ExcelView
+
+#Erro message for Portfolio Creation  Screen
+#dateOfSanction.required=Please enter date of sanction
+#longname.required=Please select long name
+#shortname.required=Please select short name
+#exposurelimit.required=Please enter exposure limit
+#financialyear.required=Please select financial year
+#maxportfoliosize.required=Please enter max portfolio size
+#guranteefee.required=Please enter gurantee fee
+#portfoliolife.required=Please enter portfolio life
+#portfoliostartdate.required=Please enter portfolio start date
+#payoutcap.required=Please enter pay out cap
+#short.name.required=Please select short name
+#max.portfolio.size.should.be.less.than.exposure.limit=Max portfolio size should not be less than exposure limit
+#sum.of.max.portfolio.size.should.be.less.than.exposure.limit=Portfolio size should be less than Sum of exposure limit
+#please.enter.the.form.details.value.required=Please Enter form field value
+#sanctionDate.should.be.greater.then.start.date=Sanction date should be greater then start date
+#portfolio.month.should.not.be.zero=Portfolio month should not be zero
+
+
